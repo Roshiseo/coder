@@ -1,0 +1,449 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 600px;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url(img/spaghetti-1932466_1280.jpg);
+    background-size: cover;
+}
+header {
+    background-color: #FF5733;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    list-style: none;
+}
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    border: solid;
+    border-color: black;
+    color: orange;
+    background-color: black;
+    display: inline;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav li {
+    margin: 0 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+nav a:hover {
+    background-color: #FF5733;
+}
+main {
+    padding: 20px;
+}
+section {
+    border: 2px solid black;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: grey;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    border: solid;
+    border-color: black;
+    color: orange;
+    background-color: black;
+    text-align: center;
+}
+ul, ol {
+    margin: 0;
+    padding-left: 20px;
+}
+a {
+    color: #FF5733;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.ag {
+    border: 2px solid black;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: gray;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    background-color: white;
+    border: 2px solid;
+    text-align: center;
+    text-transform: uppercase;
+}
+.margarita {
+    margin-left: 60px;
+    margin-top: 60px;
+}
+.sip{
+    display: flex;
+    flex-direction: column;
+}
+.si {
+    @extend .sip;
+    padding: 5px;
+}
+.nosotros{
+    border: 2px solid black;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: grey;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.preg {
+    @extend .nosotros;
+}
+footer {
+    background-color: #FF5733;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+footer i{
+    padding: 5px;
+    font-size: 40px;
+    letter-spacing: 15px;
+    color: black;
+}
+.redes{
+    background-color: white;
+    font-size: 50px;
+    word-spacing: 125px;
+}
+.ico{
+    transition: 0.7s;
+}
+.ico:hover{
+    color: blue;
+    transform: rotatez(20deg);
+}
+.barra{
+    float: right;
+    text-decoration: none;
+}
+.logo{
+    float: left;
+    border: solid;
+    border-color: black;
+    color: darkblue;
+    background-color: lightcoral;
+    text-align: center;
+    font-size: x-large;
+    margin-block: -15px;
+    animation-name: efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 8s;
+    animation-direction: alternate;
+    //animation-delay: 2s;
+}
+@keyframes efecto {
+    0% {
+        border-radius: 25%;
+        width: 150px;
+        transform: translatex(25px);
+    }
+    25% {
+        background-color: rgb(232, 163, 59);
+        transform: translateX(50px);
+    }
+    50% { 
+        border-radius: 35%;
+        font-size: 35px;
+        transform: translateX(100px);
+    }
+    100% {
+        width: 400px;
+        color: rgb(210, 210, 221);
+        border-radius: 45%;
+    }
+}
+.button{
+    background-color: black;
+}
+.def{
+    border: 2px solid black;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: grey;
+    border-radius: 8px;
+}
+.canales{
+    display: inline-block;
+    text-align: center;
+}
+@mixin subi {
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+    color: black;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    font-size: 25px;
+}
+.subir{
+    @include subi;    
+    text-align: center;
+    line-height: 40px;
+    box-shadow: inset 0 0 5px red;
+    
+}
+.subir:hover{
+    height: 45px;
+    width: 45px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0 0 5px red;
+    transition: 0.5s;
+}
+.mainfotos{
+    background-color: grey;
+    height: 500px;
+    background-image: url(img/fantasy-782001_640.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.callfotos{
+    width: 80%;
+    background-color: #FF5733;
+    color: white;
+    padding: 20px;
+    border: 3px solid black;
+}
+.callfotos p{
+    margin-bottom: 20px;
+}
+.callfotos a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #222;
+}
+.callfotos a:hover{
+    background-color: white;
+    color: black;
+}
+.galeriafotos{
+    height: 600px;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 200px);
+
+}
+.item{
+    padding: 5px;
+    border: 5px solid black;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.9s
+}
+.item1{
+    background-image: url(img/fotos1.jpg);
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.item2{
+    background-image: url(img/fotos2.jpg);
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.item3{
+    background-image: url(img/fotos3.jpg);
+    grid-column: 3/5;
+    grid-row: 1/2;
+}
+.item4{
+    background-image: url(img/fotos4.jpg);
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+.item5{
+    background-image: url(img/fotos5.jpg);
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.item6{
+    background-image: url(img/fotos6.jpg);
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+.item7{
+    background-image: url(img/fotos7.jpg);
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.item8{
+    background-image: url(img/fotos8.jpg);
+    grid-column: 3/5;
+    grid-row: 3/4;
+}
+.item:hover{
+    filter: grayscale(50%);
+    transform: scale(1.08);
+    ;
+}
+@mixin sizes ($height, $width, $bgcolor, $color) {
+    height: $height;
+    width: $width;
+    background-color: $bgcolor;
+    color: $color;
+}
+.what{
+    @include sizes(40px , 40px , black, white);
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.what:hover{
+    color: black;
+    background-color: white;
+    }
+@media only screen and (min-width:480px){
+    .galeriafotos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 200px);
+    }
+}
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .galeriafotos{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .item1{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    
+    .item2{
+        grid-column: 3/7;
+        grid-row: 1/2;
+    }
+    .item3{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .item4{
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    .item5{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .item6{
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    .item7{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .item8{
+        grid-column: 2/4;
+        grid-row: 4/5;
+    }
+}
+@media only screen and (min-width:1024px){
+    .galeriafotos{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        
+    }
+}
+::-webkit-scrollbar{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px black;
+}
+.boton{
+box-sizing: border-box;
+border: 3px  solid black;
+display: inline;
+color: black;
+background-color: white;
+transition: 0.6s;
+}
+.boton:hover{
+background-color: black;
+color: white;
+}
+.vid{
+@extend main
+}
+.recet{
+    text-decoration: none;
+    color: black;
+}
+.alcohol{
+    font-size: 14px;
+    
+}
